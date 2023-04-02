@@ -12,7 +12,32 @@
             color: var(--white)!important;
             
           }
-
+        .ol {
+          display: inline-block;
+          flex-wrap: nowrap;
+        }
+        #bread{
+          display: inline-block;
+          flex-wrap: nowrap;
+        }
+        #note {
+          position: fixed;
+          z-index: 101;
+          top: 0;
+          left: 0;
+          right: 0;
+          background: rgb(4, 150, 89);
+          text-align: center;
+          font-size: 22px;
+          line-height: 1.8;
+          overflow: hidden; 
+          -webkit-box-shadow: 0 0 5px black;
+          -moz-box-shadow:    0 0 5px black;
+          box-shadow:         0 0 5px black;
+          display: none;
+          
+      }
+      
         .light-mode {
           background: var(--white)!important;
           color: var(--black)!important;
@@ -216,3 +241,33 @@
           0% { transform: translate(-50%, -50%) rotate(0deg); }
           100% { transform: translate(-50%, -50%) rotate(360deg); }
         } */
+        svg {
+  margin-bottom: 80px;
+}
+
+.btn {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.btn:hover {
+  background-color: crimson;
+  blur: .6;
+}
+.text {
+  user-select: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.subCircle {
+  pointer-events: none;
+}
+
+.strokeW {
+  animation: strokeW .6s forwards;
+  @keyframes strokeW {
+    to {
+      stroke-width: 1.16;
+    }
+  }
+}

@@ -15,7 +15,3 @@ if __name__ == '__main__':
     minify(app=app, html=True, js=True, cssless=True, fail_safe=True)
     
    
-    
-    
-    
-#Admin panel

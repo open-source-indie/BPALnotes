@@ -1,41 +1,46 @@
+# Class Notes.
 A platform where students can access class notes shared by the lectures
 And also past papers/ CAT papers
 
 ## Run Website
 To run this website
-1. clone the repository to your local machine.
-```#!/bin/bash
-git clone <url>
+1. Clone the repository to your local machine.
 ```
-2. install requirements
-```#!/bin/bash
+git clone https://github.com/wathika-eng/BPALnotes.git
+```
+2. Create a virtual enviroment:
+```
+python -m venv (desired env. name)
+```
+
+3. Install requirements:
+```
 pip install -r requirements.txt
 ```
-3. run the app
-```#!/bin/bash
-flask run
+4. Run the app: (http://127.0.0.1:5000/)
+```
+flask run 
 ```
 OR
 
 4. Debugger turned on
-```#!/bin/bash
+```
 flask --app app.py --debug run 
 ```
-Run with Debugger enabled
+Runs with Debugger enabled
 
 ## REQUIREMENTS SPECIFICATION
 
 ### Technical Requirements
 You can use your phone or laptop to view the website
 
-To view on your phone you need ot use a private or trusted network
+To view on your phone you need to use a private or trusted network:
+
 Then on your terminal type (Confirm your IP Address first by running ipconfig on CMD)
-```#!/bin/bash
+```
 flask run --host=0.0.0.0 
 ```
-
 Can run on your default host(e.t.c :5000)
-
 
 ### Non-functional requirements
 - Data should be secure.
@@ -52,11 +57,14 @@ Can run on your default host(e.t.c :5000)
 ![bpal azurewebsites net_](https://user-images.githubusercontent.com/71040609/221318721-0938ddc7-7f61-4452-bac9-e9178452f460.png)
 
 Sign-up form
+
 ![image](https://user-images.githubusercontent.com/71040609/221444743-8de99ff3-f02c-4ab6-b48f-c0a22dbb60c7.png)
 
 
 
 ###ISSUES
-1. Lacks a download progress bar
+1. Lacks a download progress bar.
 
-2. Accordion does't turn dark despite dark mode settings
+2. Accordion does't turn dark despite dark mode settings.
+
+3. Search bar not yet working.

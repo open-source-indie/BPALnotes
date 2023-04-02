@@ -7,7 +7,7 @@
 {% endblock %}
 {% block content %}
 
-<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+<nav id="bread" d style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="/3.1">Back to home
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
@@ -21,16 +21,16 @@
 
 
     <div class="accordion" id="accordionPanelsStayOpenExample">
-        <div class="accordion-item">
+        <div >
           <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+            <button class="accordion-button" type="button"  data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
               <strong>Cost & Management Accounting</strong> 
             </button>
           </h2>
           <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
             <div class="accordion-body">
               <strong>Course Outline</strong> 
-              <a id="dwn" class="btn btn-outline-danger" rel="noopener" download="" 
+              <a id="dwn" onclick="showNotification()" class="btn btn-outline-danger" rel="noopener" download="" 
             href="https://flasknotes.blob.core.windows.net/classnotes/BPAL 3.1 Notes/Cost & Management Accounting/HEH 2103.docx">Download</a>
             </div>
           </div>

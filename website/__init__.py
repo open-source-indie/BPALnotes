@@ -14,7 +14,7 @@ from flask_minify import minify
 #create flask app and configure it / DB to models
 def create_app():
         app = Flask(__name__)
-        app.debug = True
+        app.debug = False
             # Secret key!
         app.config['SECRET_KEY'] = '****************'
         app.config["TEMPLATES_AUTO_RELOAD"] = True
