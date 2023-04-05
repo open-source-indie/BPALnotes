@@ -56,7 +56,11 @@ matplotlib==3.7.1
 mdurl==0.1.2
 numpy==1.24.2
 packaging==23.0
+<<<<<<< HEAD
 pandas==1.5.3
+=======
+pandas
+>>>>>>> 507519809c2f557854a6b77985140878ba4e3b94
 pickleshare==0.7.5
 Pillow==9.5.0
 pipreqs==0.4.11
