@@ -21,12 +21,14 @@
           flex-wrap: nowrap;
         }
         #note {
-          position: fixed;
+          position: static;
           z-index: 101;
           top: 0;
           left: 0;
           right: 0;
+          font-weight: bolder;
           background: rgb(4, 150, 89);
+          color: white;
           text-align: center;
           font-size: 22px;
           line-height: 1.8;
@@ -37,6 +39,34 @@
           display: none;
           
       }
+        #zoom{
+          transition: .4s;
+
+
+        }
+        #zoom:hover {
+          background-color:crimson ;
+           /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
       
         .light-mode {
           background: var(--white)!important;
@@ -145,7 +175,7 @@
           text-align: center;
           font-weight: bolder;
           border-radius: 50px;
-          transition: transform 0.3s ease-in-out;
+          transition: 0.5s ;
         }
         a{
           text-decoration: none;
@@ -177,12 +207,16 @@
         }
         
         @media screen and (max-width:600px){
-          
+          #form {
+            width: 40%;
+          }
           #dwn{
              display:inherit!important;
              vertical-align: inherit!important;
              margin-top: -8.5%!important;
-             margin-left: 60%!important; }
+             margin-left: 60%!important; 
+          }
+         
           a {
             font-size: 17px!important;
           }

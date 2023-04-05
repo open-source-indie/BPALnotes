@@ -1,3 +1,4 @@
+from urllib import response
 from flask import Flask, url_for, send_file, jsonify, make_response
 #from flask_sqlalchemy import SQLAlchemy
 from os import path
@@ -18,6 +19,16 @@ def create_app():
             # Secret key!
         app.config['SECRET_KEY'] = '****************'
         app.config["TEMPLATES_AUTO_RELOAD"] = True
+        app.config.update(
+        SESSION_COOKIE_SECURE=True,
+        SESSION_COOKIE_HTTPONLY=True,
+        SESSION_COOKIE_SAMESITE='Lax',
+        )
+        
+
+        #We can set secure cookies in response
+        
+
             # Define DB
         #app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
         #app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -55,12 +66,13 @@ def create_app():
             #register blueprints
         app.register_blueprint(views, url_prefix='/')
         app.register_blueprint(auth, url_prefix='/')
-
-            
+        app.after_request
+        def apply_caching(response):
+            response.headers["X-Frame-Options"] = "SAMEORIGIN"
+            response.headers["HTTP-HEADER"] = "VALUE"
+            response.set_cookie('key', 'value', secure=True, httponly=True, samesite='Lax')
+            return response
         return app
-
-
-
 #def create_database(app):
     #if not path.exists('website/' + DB_NAME):
      #   db.create_all(app=app)

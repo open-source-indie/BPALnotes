@@ -24,7 +24,7 @@
 <div class="accordion" id="accordionPanelsStayOpenExample">
     <div class="accordion-item">
       <h1 class="accordion-header" id="panelsStayOpen-headingOne">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" 
+        <button class="accordion-button" type="button" 
         data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
           <strong>Research Methodologies</strong> 
         </button>
@@ -32,10 +32,7 @@
       <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
         <div class="accordion-body">
           <strong>Course Outline</strong> 
-          <div id="myProgress">
-            <div  id="myBar"></div>
-          </div>
-          <a id="dwn" type="button" 
+          <a id="dwn" type="button" onclick="showNotification()"
           class="btn btn-outline-danger" rel="noopener" download=""  
         href="https://flasknotes.blob.core.windows.net/classnotes/research/COURSE OUTLINE.doc"><i class="fa fa-download"></i>Download</a>
         </div>
@@ -48,10 +45,7 @@
     <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
       <div class="accordion-body">
         <strong>Assignments</strong> 
-        <div id="myProgress">
-          <div  id="myBar"></div>
-        </div>
-        <a id="dwn" class="btn btn-outline-danger" id="myProgress" id="myBar" rel="noopener" download="" 
+        <a id="dwn" onclick="showNotification()" class="btn btn-outline-danger" id="myProgress" id="myBar" rel="noopener" download="" 
         href="https://flasknotes.blob.core.windows.net/classnotes/research/Bachelor Course Assig - Copy.docx">Download</a>
       </div>
     </div>
@@ -65,7 +59,7 @@
         <div id="myProgress">
           <div  id="myBar"></div>
         </div> 
-        <a class="btn btn-outline-danger" id="dwn" rel="noopener" download="" 
+        <a class="btn btn-outline-danger" id="dwn" onclick="showNotification()" rel="noopener" download="" 
         href="https://flasknotes.blob.core.windows.net/classnotes/research/Chapter One.pptx">Download</a>
       </div>
     </div>
@@ -76,7 +70,7 @@
     <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
       <div class="accordion-body">
         <strong>Chapter 2</strong> 
-        <a id="dwn" class="btn btn-outline-danger" rel="noopener" download="" 
+        <a id="dwn" class="btn btn-outline-danger" rel="noopener" download="" onclick="showNotification()" 
         href="https://flasknotes.blob.core.windows.net/classnotes/research/Chapter Two.pptx">Download</a>
       </div>
     </div>
@@ -86,7 +80,7 @@
     <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
       <div class="accordion-body">
         <strong>Chapter 3</strong> 
-        <a id="dwn" class="btn btn-outline-danger" rel="noopener" download="" 
+        <a id="dwn" class="btn btn-outline-danger" rel="noopener" download="" onclick="showNotification()"
         href="https://flasknotes.blob.core.windows.net/classnotes/research/Chapter Three.pptx">Download</a>
       </div>
     </div>
@@ -100,7 +94,7 @@
         <div id="myProgress">
           <div  id="myBar"></div>
         </div>
-        <a id="dwn" class="btn btn-outline-danger" rel="noopener" download="" 
+        <a id="dwn" class="btn btn-outline-danger" rel="noopener" download="" onclick="showNotification()"
         href="https://flasknotes.blob.core.windows.net/classnotes/research/Chapter Four.pptx">Download</a>
       </div>
     </div>
@@ -114,7 +108,7 @@
     <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
       <div class="accordion-body">
         <strong>Chapter 5</strong> 
-        <a id="dwn" class="btn btn-outline-danger" view="" rel="noopener" download="" 
+        <a id="dwn" class="btn btn-outline-danger" view="" rel="noopener" download="" onclick="showNotification()"
         href="https://flasknotes.blob.core.windows.net/classnotes/research/Chapter Five.pptx">Download</a>
       </div>
     </div>
@@ -129,20 +123,8 @@
         <div id="myProgress">
           <div  id="myBar"></div>
         </div>
-        <a id="dwn" class="btn btn-outline-danger" view="" rel="noopener" download="" 
+        <a id="dwn" class="btn btn-outline-danger" view="" rel="noopener" download="" onclick="showNotification()"
         href="https://flasknotes.blob.core.windows.net/classnotes/research/Chapter Six literature review.ppt">Download</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!----<div class="accordion" id="accordionPanelsStayOpenExample">
-  <div class="accordion-item">
-    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-      <div class="accordion-body">
-        <strong>Chapter 7</strong> 
-        <a id="dwn" class="btn btn-outline-danger" view="" rel="noopener" download="" 
-        href="{{url_for('static', filename='uploads/receipt.pdf')}}">Download</a>
       </div>
     </div>
   </div>
@@ -152,13 +134,36 @@
   <div class="accordion-item">
     <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
       <div class="accordion-body">
-        <strong>Chapter 8</strong> 
-        <a id="dwn" class="btn btn-outline-danger" view="" rel="noopener" download="" 
-        href="{{url_for('static', filename='uploads/receipt.pdf')}}">Download</a>
+        <strong>Chapter 7</strong> 
+        <a id="dwn" class="btn btn-outline-danger" view="" rel="noopener" download="" onclick="showNotification()"
+        href="">Download</a>
       </div>
     </div>
   </div>
-</div>---->
+</div>
+
+<div class="accordion" id="accordionPanelsStayOpenExample">
+  <div class="accordion-item">
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+      <div class="accordion-body">
+        <strong>Chapter 8 part 1</strong> 
+        <a id="dwn" class="btn btn-outline-danger" view="" rel="noopener" download="" onclick="showNotification()"
+        href="https://flasknotes.blob.core.windows.net/classnotes/BPAL%204.1%20Notes/Research%20Methodology/Chapter%20Eight%20Data%20Analysis.pptx">Download</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="accordion" id="accordionPanelsStayOpenExample">
+  <div class="accordion-item">
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+      <div class="accordion-body">
+        <strong>Chapter 8 part 2</strong> 
+        <a id="dwn" class="btn btn-outline-danger" view="" rel="noopener" download="" onclick="showNotification()"
+        href="https://flasknotes.blob.core.windows.net/classnotes/BPAL%204.1%20Notes/Research%20Methodology/Chapter%20eight%20Data%20Analysis%20(2).pptx">Download</a>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="accordion" id="accordionPanelsStayOpenExample">
   <div class="accordion-item">
     <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
@@ -170,13 +175,13 @@
     </div>
   </div>
 </div>
-<!----<div class="accordion" id="accordionPanelsStayOpenExample">
+<div class="accordion" id="accordionPanelsStayOpenExample">
   <div class="accordion-item">
     <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
       <div class="accordion-body">
-        <strong>Chapter 10</strong> 
-        <a id="dwn" class="btn btn-outline-danger" view="" rel="noopener" download="" 
-        href="{{url_for('static', filename='uploads/receipt.pdf')}}">Download</a>
+        <strong>Statistics</strong> 
+        <a id="dwn" class="btn btn-outline-danger" view="" rel="noopener" download="" onclick="showNotification()"
+        href="https://flasknotes.blob.core.windows.net/classnotes/BPAL%204.1%20Notes/Research%20Methodology/Introduction%20to%20statistics.ppt">Download</a>
       </div>
     </div>
   </div>
@@ -185,12 +190,9 @@
   <div class="accordion-item">
     <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
       <div class="accordion-body">
-        <strong>Chapter 11</strong> 
-        <div id="myProgress">
-          <div  id="myBar"></div>
-        </div>
-        <a id="dwn" class="btn btn-outline-danger" view="" rel="noopener" download="" 
-        href="{{url_for('static', filename='uploads/receipt.pdf')}}">Download</a>
+        <strong>Questionnaire sample</strong> 
+        <a id="dwn" class="btn btn-outline-danger" view="" rel="noopener" download="" onclick="showNotification()"
+        href="https://flasknotes.blob.core.windows.net/classnotes/BPAL%204.1%20Notes/Research%20Methodology/QUESTIONNAIRE%20FOR%20ORGANISATIONAL%20ATTRACTIVENESS.docx">Download</a>
       </div>
     </div>
   </div>
@@ -199,23 +201,24 @@
   <div class="accordion-item">
     <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
       <div class="accordion-body">
-        <strong>Chapter 12</strong> 
-        <div id="myProgress">
-          <div  id="myBar"></div>
-        </div>
-        <a id="dwn" class="btn btn-outline-danger" view="" rel="noopener" download="" 
-        href="{{url_for('static', filename='uploads/receipt.pdf')}}">Download</a>--->
+        <strong>Data in Tables</strong> 
+        <a id="dwn" class="btn btn-outline-danger" view="" rel="noopener" download="" onclick="showNotification()"
+        href="https://flasknotes.blob.core.windows.net/classnotes/BPAL%204.1%20Notes/Research%20Methodology/Presenting%20Data%20in%20Tables.docx">Download</a>
       </div>
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
+<div class="accordion" id="accordionPanelsStayOpenExample">
+  <div class="accordion-item">
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+      <div class="accordion-body">
+        <strong>COHRED Guidelines</strong> 
+        <a id="dwn" class="btn btn-outline-danger" view="" rel="noopener" download="" onclick="showNotification()"
+        href="https://flasknotes.blob.core.windows.net/classnotes/BPAL%204.1%20Notes/Research%20Methodology/GUIDELINE-FOR-RESEARCH-PROPOSAL.pdf">Download</a>
+      </div>
+    </div>
+  </div>
+</div>
 <!-----------------------------------------------------------------------------------------end of div------------------------------->
 </div>
 
@@ -249,7 +252,7 @@
   </ul>
 </nav>
 
-<script>
+<script defer>
 //download progress bar
   let i = 0;
   function f(download) {
@@ -270,7 +273,7 @@
       }
     }
   }
-  </script>
+</script>
 {% endblock %}
 
 {% block footer %}

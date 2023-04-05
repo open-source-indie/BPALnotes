@@ -32,11 +32,24 @@ def site():
 def robots():
     return render_template('robots.txt')
 
+@views.after_request
+def apply_caching(response):
+        response.headers["X-Frame-Options"] = "SAMEORIGIN"
+        response.headers["HTTP-HEADER"] = "VALUE"
+        response.set_cookie('key', 'value', secure=True, httponly=True, samesite='Lax')
+        return response
 ##home##
-@views.route("/error")
-@decorators.minify(html=True, js=True, cssless=True)
-def error():
-    return render_template('404.html')
+#@views.route("/error")
+#@decorators.minify(html=True, js=True, cssless=True)
+#def error():
+#    return render_template('404.html')
+
+@views.errorhandler(404)
+  # inbuilt function which takes error as parameter
+def not_found(e):
+# defining function
+  return render_template('404.html')
+
 
 @views.route("/3a77444deaa3460ab5d78f7190debc5d")
 def indexer():

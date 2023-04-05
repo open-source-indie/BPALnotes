@@ -60,9 +60,13 @@ Sign-up form
 
 ![image](https://user-images.githubusercontent.com/71040609/221444743-8de99ff3-f02c-4ab6-b48f-c0a22dbb60c7.png)
 
+### Tweaks
 
+Vibrates on large downloads.
 
-###ISSUES
+Accordion cannot be closed.
+
+### ISSUES
 1. Lacks a download progress bar.
 
 2. Accordion does't turn dark despite dark mode settings.
