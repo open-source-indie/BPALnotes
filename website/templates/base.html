@@ -310,11 +310,16 @@ data-size="normal"><div style="width: 304px; height: 78px;"><div><iframe title="
     toastTrigger.addEventListener('click', () => {
       toastBootstrap.show()
       document.getElementById("note").style.display = "block";
-      setInterval( function() {
-    //change text when download is finished
-      var span = document.getElementById("dwn").textContent="Downloaded✔️";
+      document.querySelectorAll('#dwn').forEach(element=>{
+        element.addEventListener('click',()=>{
+          element.innerHTML = "Downloaded✔️";
+        })
+      })
+  //     setInterval( function() {
+  //   //change text when download is finished
+  //     var span = document.getElementById("dwn").textContent="Downloaded✔️";
       
-  },5000)
+  // },5000)
     setTimeout(function(){
     document.getElementById("note").style.display = "none";
     },5500)
