@@ -1,14 +1,13 @@
 {
-  "name": "BPAL class notes",
+  "name": "BPAL class notes web app",
   "short_name": "Class notes",
   "start_url": "/",
-  "scope": "/",
-  "display": "standalone",
+  "display": "browser",
   "description": "BPAL class notes for personal revision",
   "lang": " eng",
   "dir": "auto",
-  "theme_color": "#000000",
-  "background_color": "#000000",
+  "theme_color": "#702c9f",
+  "background_color": "#185898",
   "orientation": "any",
   "icons": [
       {
@@ -44,11 +43,11 @@
       
   ],
 
-  "prefer_related_applications": false,
+  "prefer_related_applications": true,
   "shortcuts": [
       {
           "name":"Class Notes",
-          "url":"/n&n",
+          "url":"/",
           "description":"Access on your homescreen"
       }
   ]

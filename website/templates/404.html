@@ -1,4 +1,6 @@
-html>
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html>
 <head>
 <title>Page Not Found</title>
 <script language="JavaScript" type="text/javascript">
@@ -6,7 +8,7 @@ html>
 var seconds =6;
 // countdown timer. took 6 because page takes approx 1 sec to load
   
-var url="{{url_for(index)}}";
+var url="{{url_for(/)}}";
 // variable for index.html url
   
 function redirect(){
@@ -23,14 +25,12 @@ function redirect(){
 }
 </script>
 </head>
-  
-{% extends "header.html" %}
+
 //exporting navbar and header from header.html
 {% block body %}
    
- <body onload="redirect()">
+<body onload="redirect()">
 <p id="pageInfo"></p>
 {% endblock %}
-  
-  
+</body>    
 </html>

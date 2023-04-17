@@ -108,7 +108,7 @@
   <div id="loader">
     <div class="loader"></div>
   </div>
-  <div id="note" py-0>
+  <div id="note" py-2>
     Downloading!
     <i class="bi bi-cloud-arrow-down"></i>
 </div>
@@ -279,47 +279,29 @@ data-size="normal"><div style="width: 304px; height: 78px;"><div><iframe title="
 <!----------------------------JavaScript------------------------------------------------------------------->    
 {% block js %}
 <script>
-  //let button = document.getElementById("dwn")
-  // Add a click event listener to the button
-  //button.addEventListener("click",
-  function showNotification(){
-  
-  //document.getElementById("note").style.display = "block";
-  
-  setInterval( function() {
-    //change text when download is finished
-    //const span = document.getElementById("dwn").textContent="Downloaded✔️";
-    //var note = document.getElementById("note").textContent="Downloaded✔️";
-  },4000);
-  // setTimeout(hideNotification(),3000);
-  setTimeout(function(){
-  
-    document.getElementById("note").style.display = "none";
-    document.getElementById('liveToast').style.display = "none";
-  }, 5500);
-  
-}
+
 </script>
+
 <script>
-  const toastTrigger = document.getElementById('dwn');
-  var note = document.getElementById('note');
-  var toastLiveExample = document.getElementById('liveToast');
+  let toastTrigger = document.querySelectorAll('#dwn');
+  let note = document.getElementById('note');
+  let toastLiveExample = document.getElementById('liveToast');
 
   if (toastTrigger) {
-    var toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+    let toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
     toastTrigger.addEventListener('click', () => {
       toastBootstrap.show()
       document.getElementById("note").style.display = "block";
-      document.querySelectorAll('#dwn').forEach(element=>{
+      
+    })
+     setInterval( function() {
+   //change text when download is finished
+     let span = document.getElementById("dwn").textContent="Downloaded✔️";
+     document.querySelectorAll('#dwn').forEach(element=>{
         element.addEventListener('click',()=>{
           element.innerHTML = "Downloaded✔️";
         })
-      })
-  //     setInterval( function() {
-  //   //change text when download is finished
-  //     var span = document.getElementById("dwn").textContent="Downloaded✔️";
-      
-  // },5000)
+  },5000)
     setTimeout(function(){
     document.getElementById("note").style.display = "none";
     },5500)
